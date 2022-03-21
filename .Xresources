@@ -60,12 +60,17 @@ URxvt.keysym.C-M-v:    builtin-string:
 URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
 URxvt.keysym.C-S-0x56: eval:paste_clipboard
 
+URxvt.pointerBlank: true
+
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
 
 URxvt.font: xft:Hack Nerd Font Mono:size=12, xft:Symbola, xft:Noto Color Emoji
 !URxvt.letterSpace: -2
 URxvt.scrollBar:false
 URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,clipboard
-URxvt.colorUL:		#4682B4
+URxvt.matcher.button: 1
+URxvt.colorUL:		#ECBCCD
 URxvt.internalBorder:20
 
 URxvt.resize-font.bigger: C-+

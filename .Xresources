@@ -1,0 +1,73 @@
+Xft.dpi: 144
+
+URxvt*foreground: #ECBCCD
+XTerm*foreground: #ECBCCD
+URxvt*background: #110817
+XTerm*background: #110817
+URxvt*cursorColor: #ECBCCD
+XTerm*cursorColor: #110817
+*color0: #110817
+*.color0: #110817
+*color1: #9B182E
+*.color1: #9B182E
+*color2: #9F265C
+*.color2: #9F265C
+*color3: #DB2E53
+*.color3: #DB2E53
+*color4: #9C6367
+*.color4: #9C6367
+*color5: #6E4397
+*.color5: #6E4397
+*color6: #D04BA6
+*.color6: #D04BA6
+*color7: #ECBCCD
+*.color7: #ECBCCD
+*color8: #666666
+*.color8: #666666
+*color9: #9B182E
+*.color9: #9B182E
+*color10: #9F265C
+*.color10: #9F265C
+*color11: #DB2E53
+*.color11: #DB2E53
+*color12: #9C6367
+*.color12: #9C6367
+*color13: #6E4397
+*.color13: #6E4397
+*color14: #D04BA6
+*.color14: #D04BA6
+*color15: #ECBCCD
+*.color15: #ECBCCD
+*color66: #110817
+rofi.color-enabled: true
+rofi.color-window: argb:FF110817, #110817, #9F265C
+rofi.color-normal: argb:FF110817, #ECBCCD, #110817, #9F265C, #110817
+rofi.color-active: argb:FF110817, #ECBCCD, #110817, #9F265C, #110817
+rofi.color-urgent: argb:FF110817, #9B182E, #110817, #9B182E, #ECBCCD
+emacs*background: #110817
+emacs*foreground: #ECBCCD
+
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Disable Ctrl-Alt-c & Ctrl-Alt-v bindings (optional)
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+! I dont know why, but I needed to use hex keysym values to get it to work
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
+
+
+URxvt.font: xft:Hack Nerd Font Mono:size=12, xft:Symbola, xft:Noto Color Emoji
+!URxvt.letterSpace: -2
+URxvt.scrollBar:false
+URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,clipboard
+URxvt.colorUL:		#4682B4
+URxvt.internalBorder:20
+
+URxvt.resize-font.bigger: C-+
+
+URxvt.url-launcher: firefox-developer-edition

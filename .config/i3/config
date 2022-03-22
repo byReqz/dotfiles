@@ -16,6 +16,8 @@ for_window [class="URxvt"] border pixel 1
 for_window [class="discord"] border pixel 1
 for_window [class="Spotify"] border pixel 1
 for_window [class="VSCodium"] border pixel 1
+for_window [class="TelegramDesktop"] border pixel 1
+for_window [class="tutanota-desktop"] border pixel 1
 
 # colors
 # class                         border          background      text            indicator     child_border
@@ -25,7 +27,17 @@ client.unfocused                #4e375d         #000000         #888888         
 client.urgent                   #2f343a         #900000         #ffffff         #DB2E53       #52266e
 client.placeholder              #000000         #000000         #ffffff         #DB2E53       #52266e
 
+# placement rules
+## dialogs
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 
+## ws10
+for_window [class="tutanota-desktop"] move --no-auto-back-and-forth container to workspace $ws10
+for_window [class="TelegramDesktop"] move --no-auto-back-and-forth container to workspace $ws10
+
+## ws9
+for_window [class="discord"] move --no-auto-back-and-forth container to workspace $ws9
 
 # i3 config file (v4)
 #
@@ -49,7 +61,7 @@ font pango:monospace 9
 
 # autostart
 ###bg
-#exec feh --bg-center /home/nils/Pictures/Wallpaper/604638.jpg
+exec feh --bg-center /home/nils/Pictures/Wallpaper/604638.jpg
 
 ### polybar
 exec_always --no-startup-id ~/.config/polybar/polybar.sh
@@ -61,22 +73,21 @@ exec --no-startup-id pkill -15 opensnitch-ui
 exec --no-startup-id nextcloud --background
 
 ### discord
-exec --no-startup-id discord --start-minimized
+exec --no-startup-id discord #--start-minimized
 
 ### flameshot
 exec --no-startup-id flameshot
 
 ### telegram
-exec --no-startup-id telegram-desktop -workdir /home/nils/.local/share/TelegramDesktop/ -autostart -startintray
+exec --no-startup-id telegram-desktop -workdir /home/nils/.local/share/TelegramDesktop/ -autostart #-startintray
 
 ### tutanota
-#exec --no-startup-id tutanota-desktop
+exec --no-startup-id tutanota-desktop
 
 ### gnome keyring
-#exec gnome-keyring-daemon --start --components=secrets
-#exec gnome-keyring-daemon --start --components=ssh
-#exec gnome-keyring-daemon --start --components=pkcs11
-exec --no-startup-id gnome-keyring-daemon -d -r
+exec gnome-keyring-daemon --start --components=secrets
+exec gnome-keyring-daemon --start --components=ssh
+exec gnome-keyring-daemon --start --components=pkcs11
 
 # hotkeys
 ### flameshot

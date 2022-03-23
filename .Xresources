@@ -60,19 +60,28 @@ URxvt.keysym.C-M-v:    builtin-string:
 URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
 URxvt.keysym.C-S-0x56: eval:paste_clipboard
 
+!move words by ctrl + left/right
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:    \033[1;5C
+
+!hide mousepointer when typing
 URxvt.pointerBlank: true
 
+!make scrolling better
 URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
 
+!font stuff
 URxvt.font: xft:Hack Nerd Font Mono:size=12, xft:Symbola, xft:Noto Color Emoji
 !URxvt.letterSpace: -2
+
+!hide scrollbar
 URxvt.scrollBar:false
+
+!extensions
 URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,clipboard
 URxvt.matcher.button: 1
 URxvt.colorUL:		#ECBCCD
 URxvt.internalBorder:20
-
 URxvt.resize-font.bigger: C-+
-
 URxvt.url-launcher: firefox-developer-edition

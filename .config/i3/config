@@ -63,6 +63,11 @@ font pango:monospace 9
 ###bg
 exec feh --bg-center /home/nils/Pictures/Wallpaper/604638.jpg
 
+### gnome keyring
+exec gnome-keyring-daemon --start --components=secrets
+exec gnome-keyring-daemon --start --components=ssh
+exec gnome-keyring-daemon --start --components=pkcs11
+
 ### polybar
 exec_always --no-startup-id ~/.config/polybar/polybar.sh
 
@@ -83,11 +88,6 @@ exec --no-startup-id telegram-desktop -workdir /home/nils/.local/share/TelegramD
 
 ### tutanota
 exec --no-startup-id tutanota-desktop
-
-### gnome keyring
-exec gnome-keyring-daemon --start --components=secrets
-exec gnome-keyring-daemon --start --components=ssh
-exec gnome-keyring-daemon --start --components=pkcs11
 
 # hotkeys
 ### flameshot
@@ -113,8 +113,8 @@ exec --no-startup-id dunst
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 

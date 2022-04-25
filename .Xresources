@@ -72,7 +72,7 @@ URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
 
 !font stuff
-URxvt.font: xft:Hack Nerd Font Mono:size=12, xft:Symbola, xft:Noto Color Emoji
+URxvt.font: xft:Hack Nerd Font Mono:size=19, xft:Symbola, xft:Noto Color Emoji
 !URxvt.letterSpace: -2
 
 !hide scrollbar
@@ -83,5 +83,5 @@ URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,clip
 URxvt.matcher.button: 1
 URxvt.colorUL:		#ECBCCD
 URxvt.internalBorder:20
-URxvt.resize-font.bigger: C-+
+!URxvt.resize-font.bigger: C-+
 URxvt.url-launcher: firefox-developer-edition

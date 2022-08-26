@@ -72,8 +72,9 @@ URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
 
 !font stuff
-URxvt.font: xft:Hack Nerd Font Mono:size=19, xft:Symbola, xft:Noto Color Emoji
-!URxvt.letterSpace: -2
+!URxvt.font: xft:Hack Nerd Font:size=19, xft:Symbola, xft:Noto Color Emoj
+URxvt.font: xft:SFMono Nerd Font Mono:size=19, xft:Symbola, xft:Noto Color Emoj
+URxvt.letterSpace: -2
 
 !hide scrollbar
 URxvt.scrollBar:false

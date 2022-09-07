@@ -22,6 +22,10 @@ for_window [class="firefox"] border pixel 1
 for_window [class="Joplin"] border pixel 1
 for_window [class="Steam"] border pixel 1
 for_window [class="Signal"] border pixel 1
+for_window [class="Virt-manager"] border pixel 1
+for_window [class="Ferdi"] border pixel 1
+for_window [class="jetbrains-goland"] border pixel 1
+for_window [class="jetbrains-idea"] border pixel 1
 
 # colors
 # class                         border          background      text            indicator     child_border
@@ -108,6 +112,9 @@ bindsym Print exec flameshot gui
 ### brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+### monitor script
+bindsym XF86Display exec ~/Code/dotfiles/monitor.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.

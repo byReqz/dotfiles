@@ -26,6 +26,7 @@ for_window [class="Virt-manager"] border pixel 1
 for_window [class="Ferdi"] border pixel 1
 for_window [class="jetbrains-goland"] border pixel 1
 for_window [class="jetbrains-idea"] border pixel 1
+for_window [class="Nextcloud"] border pixel 1
 
 # colors
 # class                         border          background      text            indicator     child_border

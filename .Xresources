@@ -71,6 +71,9 @@ URxvt.pointerBlank: true
 URxvt.secondaryScreen: true
 URxvt.secondaryScroll: false
 
+!fix prompt beginning in the middle of the screen (https://bbs.archlinux.org/viewtopic.php?id=282791)
+URxvt.geometry: 400x400
+
 !font stuff
 URxvt.font: xft:Hack Nerd Font Mono:size=19, xft:Symbola, xft:Noto Color Emoji
 !URxvt.font: xft:SFMono Nerd Font Mono:size=19, xft:Symbola, xft:Noto Color Emoji
@@ -84,5 +87,5 @@ URxvt.perl-ext-common: default,matcher,font-size,url-select,keyboard-select,clip
 URxvt.matcher.button: 1
 URxvt.colorUL:		#ECBCCD
 URxvt.internalBorder:20
-!URxvt.resize-font.bigger: C-+
+URxvt.resize-font.bigger: C-+
 URxvt.url-launcher: firefox-developer-edition

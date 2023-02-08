@@ -8,6 +8,8 @@ left="$icon extend left"
 right="$icon extend right"
 bottom="$icon extend bottom"
 duplicate="$icon duplicate"
+fullhd="$icon fallback to 1080p"
+wqhd="$icon fallback to 1440p"
 
 action="$(echo -e "\
 $mirror
@@ -17,7 +19,9 @@ $secondary
 $top
 $left
 $right
-$bottom" | rofi -dmenu -p "monitor settings" -markup-rows)"
+$bottom
+$fullhd
+$wqhd" | rofi -dmenu -p "monitor settings" -markup-rows)"
 
 case "$action" in
     $mirror)
@@ -43,5 +47,11 @@ case "$action" in
         ;;
     $bottom)
 		mons -e bottom
+        ;;
+    $fullhd)
+        xrandr --output eDP1 --mode 1920x1080
+        ;;
+    $wqhd)
+        xrandr --output eDP1 --mode 2560x1440
         ;;
 esac
